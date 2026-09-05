@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply Assist</title>
+    <style>
+      html, body, #root {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+      }
+      body {
+        background: #15191E;
+      }
+      body[data-theme="light"] {
+        background: #F5F3EE;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <script>
+      (function () {
+        var t = localStorage.getItem("aa-theme");
+        if (t === "light") document.body.setAttribute("data-theme", "light");
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
